@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 
 function ModalContent(props) {
@@ -8,15 +8,15 @@ function ModalContent(props) {
     setDescription,
     setDishType,
     setKcl,
-    setDishPrice,
-    setPersonsPerDish,
+    // setDishPrice,
+    // setPersonsPerDish,
     dishImage,
     dishName,
     dishDescription,
     dishType,
     kcl,
-    dishPrice,
-    personsPerDish,
+    // dishPrice,
+    // personsPerDish,
     ingredient,
     setIngredient,
     addIngredientCard,
