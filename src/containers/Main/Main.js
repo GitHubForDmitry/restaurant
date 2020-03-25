@@ -7,7 +7,8 @@ import ModalContent from "../../components/ModalContent";
 function Main(props) {
     const { filter, openModal, isModalOpen, closeModal, data } = useContext(AppContext);
     const allDishes =
-        [...dishes, ...data].flat(2)
+        dishes
+            .concat(data)
             .filter(dish => dish.name.toLowerCase().includes(filter))
             .map((dish, index) =>
                     <div key={index}>
@@ -17,8 +18,6 @@ function Main(props) {
                     </div>
                 ,);
     useEffect(() => {}, [allDishes, data])
-    console.log(data);
-    console.log(dishes);
     return (
         <div>
             <button onClick={openModal}>add</button>

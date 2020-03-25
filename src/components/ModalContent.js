@@ -23,9 +23,9 @@ function ModalContent(props) {
     addPreparedCard,
     dataIngredient,
     totalKcl,
-    removeIngredient
+    removeIngredient,
+    buttonAddDish
   } = useContext(AppContext);
-  console.log(dataIngredient);
 
   return (
     <div>
@@ -124,8 +124,8 @@ function ModalContent(props) {
           <p>{totalKcl.total} calories</p>
         </div>
       </div>
-      <div>
-        <button onClick={addPreparedCard}>addPreparedCard</button>
+      <div> {buttonAddDish && <button onClick={addPreparedCard}>addPreparedCard</button>
+      }
       </div>
     </div>
   );

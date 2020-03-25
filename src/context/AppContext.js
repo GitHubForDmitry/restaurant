@@ -17,12 +17,12 @@ const AppProvider = ({ children }) => {
   const [personsPerDish, setPersonsPerDish] = useState("");
   const [ingredient, setIngredient] = useState("");
   const [totalKcl, setTotalKcl] = useState({});
-
   const [cardList, dispatch] = useReducer(cardReducer, []);
   const [ingredientList, dispatchIngredient] = useReducer(
     ingredientReducer,
     []
   );
+  const [buttonAddDish, setButtonAddDish] = useState(false);
 
   const addCard = (image, name, description, type, kcl, price, persons) => {
     dispatch({
@@ -39,7 +39,7 @@ const AppProvider = ({ children }) => {
     });
   };
   const deleteIngredient = id => {
-      dispatchIngredient({ type: DELETE_INGREDIENT, payload: id });
+    dispatchIngredient({ type: DELETE_INGREDIENT, payload: id });
   };
 
   const addIngredient = (ingredient, kcl) => {
@@ -82,16 +82,16 @@ const AppProvider = ({ children }) => {
     addIngredient(ingredient, kcl);
   };
 
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
 
   const removeIngredient = id => {
-      deleteIngredient(id);
+    deleteIngredient(id);
   };
 
   useEffect(() => {
@@ -114,6 +114,11 @@ const AppProvider = ({ children }) => {
     }
   }, [ingredientList]);
 
+  useEffect(() => {
+    if (dishName !== "" && dishDescription !== "" && dishImage !== "") {
+      setButtonAddDish(true);
+    } else setButtonAddDish(false)
+  }, [buttonAddDish, dishName, dishDescription, dishImage]);
   return (
     <AppContext.Provider
       value={{
@@ -146,6 +151,7 @@ const AppProvider = ({ children }) => {
         removeIngredient,
         handleChangeImage,
         addPreparedCard,
+        buttonAddDish
       }}
     >
       {children}
