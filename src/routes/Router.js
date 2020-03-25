@@ -3,8 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from "../screens/Home";
 import Menu from "../screens/Menu";
 import Contact from "../screens/Contact";
-import Sign from "../screens/Sign";
-import LinkRoutes from "../components/Link";
+import LinkRoutes from "../components/LinkRoutes";
 
 function RouterComponent(props) {
   return (
@@ -19,9 +18,6 @@ function RouterComponent(props) {
             </Route>
             <Route path="/contact">
               <Contact />
-            </Route>
-            <Route path="/sign">
-              <Sign />
             </Route>
           </Switch>
     </Router>

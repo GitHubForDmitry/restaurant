@@ -1,8 +1,15 @@
 import React from 'react';
+import Header from "../containers/Header/Header";
+import Main from "../containers/Main/Main";
+import Footer from "../containers/Footer/Footer";
 
 function Menu(props) {
     return (
-        <div></div>
+        <>
+        <Header> </Header>
+            <Main/>
+            <Footer />
+        </>
     );
 }
 

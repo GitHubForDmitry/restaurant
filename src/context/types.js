@@ -1,0 +1,3 @@
+export const ADD_DISH = "ADD_DISH";
+export const DELETE_INGREDIENT = "DELETE_INGREDIENT";
+export const ADD_INGREDIENT = "ADD_INGREDIENT";

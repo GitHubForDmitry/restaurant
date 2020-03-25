@@ -1,10 +1,10 @@
-import img1 from "../../public/images/image1.jpg"
-import img2 from "../../public/images/image2.jpg"
-import img3 from "../../public/images/image3.jpg"
-import img4 from "../../public/images/image4.jpg"
-import img5 from "../../public/images/image5.jpg"
-import img6 from "../../public/images/image6.jpg"
-import img7 from "../../public/images/image7.jpg"
+import img1 from "./images/image1.jpg"
+import img2 from "./images/image2.jpg"
+import img3 from "./images/image3.jpg"
+import img4 from "./images/image4.jpg"
+import img5 from "./images/image5.jpg"
+import img6 from "./images/image6.jpg"
+import img7 from "./images/image7.jpg"
 
 export const dishes = [
     {
@@ -12,7 +12,7 @@ export const dishes = [
         image: img1,
         type: "meat",
         kcl: 243,
-        name: "Roasted Butternut Pumpkin,Shiitake Mushroom and Haloumi Salad",
+        name: "Roasted Butternut Pumpkin, Shiitake Mushroom and Haloumi Salad",
         description: "A hearty mix of fresh greens, roasted vegetables and golden haloumi makes up this tasty winter salad.",
         price: 66,
         persons: 2
