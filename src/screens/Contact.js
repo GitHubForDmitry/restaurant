@@ -1,8 +1,11 @@
 import React from 'react';
+import LinkRoutes from "../components/LinkRoutes/LinkRoutes";
 
 function Contact(props) {
     return (
-        <div></div>
+        <div>
+            <LinkRoutes />
+        </div>
     );
 }
 
