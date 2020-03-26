@@ -12,7 +12,7 @@ function User({fill, width, height, styles}) {
                 <use xlinkHref="#prefix__ae"/>
             </mask>
             <use fill={fill} fillRule="nonzero" xlinkHref="#prefix__ae"/>
-            <g fill="#FFF" mask="url(#prefix__bf)">
+            <g fill={fill} mask="url(#prefix__bf)">
                 <path d="M0 0H24V24H0z" transform="translate(-3 -2)"/>
             </g>
         </g>

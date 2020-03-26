@@ -10,30 +10,22 @@
       margin-right: 0;
     }
     &--link {
-      font-family: 'Source Serif Pro', serif;
-      font-size: 17px;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.41;
-      letter-spacing: -0.43px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 5px 14px;
+      @include textStyles(#fff, 17);
+      &-scroll{
+        @include textStyles(#000, 17);
+      }
      &--active {
-       font-family: 'Source Serif Pro', serif;
-       font-size: 17px;
-       font-stretch: normal;
-       font-style: normal;
-       line-height: 1.41;
-       letter-spacing: -0.43px;
-       color: #fff;
-       text-decoration: none;
-       font-weight: 700;
-       padding: 5px 14px;
+       @include textStyles(#fff, 17);
         background-color: $butterscotch;
           mix-blend-mode: hard-light;
         border-radius: 5px;
+      }
+
+      &--active-scroll {
+        @include textStyles($butterscotch, 17);;
+        background-color: rgba($butterscotch, 0.2);
+        border-radius: 5px;
+
       }
     }
   }

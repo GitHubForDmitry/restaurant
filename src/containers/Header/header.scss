@@ -7,6 +7,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  transition: .5s;
   &__logo--img {
     height: 46px;
     width: 70px;
@@ -75,4 +76,15 @@
       margin-right: 8px;
     }
   }
+}
+
+.sticky {
+  position: fixed;
+  height: 110px;
+  margin-bottom: 190px;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+  transition: .5s;
 }

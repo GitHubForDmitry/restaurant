@@ -18,7 +18,8 @@
   background-image: url("../../../src/assets/images/image@2x.jpg");
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  transition: .5s; }
   .header__logo--img {
     height: 46px;
     width: 70px; }
@@ -76,5 +77,15 @@
     color: #fff; }
     .header__user-name {
       margin-right: 8px; }
+
+.sticky {
+  position: fixed;
+  height: 110px;
+  margin-bottom: 190px;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+  transition: .5s; }
 
 /*# sourceMappingURL=header.css.map */
