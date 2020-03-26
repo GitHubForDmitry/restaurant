@@ -11,6 +11,7 @@ export const cardReducer = (state, action) => {
                     name: action.payload.name,
                     description: action.payload.description,
                     type: action.payload.type,
+                    kcl: action.payload.kcl,
                     price: action.payload.price,
                     persons: action.payload.persons
                 }

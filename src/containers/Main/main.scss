@@ -99,6 +99,8 @@ $pad: 30px;
   }
   &--img {
     border-radius: 10px;
+    max-width: 305px;
+    min-height: 180px;
   }
   &--type-kcl {
     display: flex;
@@ -141,6 +143,7 @@ $pad: 30px;
     }
   }
   &--description {
+    max-width: 270px;
     height: 54px;
     margin-bottom: 10px;
 

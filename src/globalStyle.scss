@@ -32,3 +32,9 @@ $blackText: #262626;
   font-weight: 700;
   padding: 5px 14px;
 }
+
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

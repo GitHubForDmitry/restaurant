@@ -73,7 +73,7 @@ const AppProvider = ({ children }) => {
       dishName,
       dishDescription,
       dishType,
-      kcl,
+      totalKcl.total,
       dishPrice,
       personsPerDish
     );

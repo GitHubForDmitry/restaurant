@@ -93,7 +93,9 @@
     flex-direction: column;
     padding: 20px 30px 10px 20px; }
   .dish-catalogue--img {
-    border-radius: 10px; }
+    border-radius: 10px;
+    max-width: 305px;
+    min-height: 180px; }
   .dish-catalogue--type-kcl {
     display: flex;
     justify-content: space-between;
@@ -130,6 +132,7 @@
       height: 4px;
       background-color: #ffb53a; }
   .dish-catalogue--description {
+    max-width: 270px;
     height: 54px;
     margin-bottom: 10px;
     font-family: 'Source Serif Pro', serif;
