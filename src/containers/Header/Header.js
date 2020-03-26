@@ -5,8 +5,8 @@ import LinkRoutes from "../../components/LinkRoutes/LinkRoutes";
 import logo3x from "../../assets/images/logo/restaurant-logo@3x.png";
 import logo2x from "../../assets/images/logo/restaurant-logo@2x.png";
 import logo from "../../assets/images/logo/restaurant-logo.png";
-import search from "../../assets/images/icons/search.svg";
-import user from "../../assets/images/icons/user.svg";
+import Search from "../../assets/images/icons/Search";
+import User from "../../assets/images/icons/User";
 
 function Header(props) {
   const { filter, setFilter } = useContext(AppContext);
@@ -26,22 +26,27 @@ function Header(props) {
           </div>
           <LinkRoutes />
           <div className="header__wrapper--input">
-          <label className="header__label" htmlFor="search">
-            <input
+            <label className="header__label" htmlFor="search">
+              <input
                 className="header__input"
                 value={filter.toLowerCase()}
-              type="text"
-              onChange={e => setFilter(e.target.value)}
-              id="search"
-              placeholder="Try « Chicken cotoletta »"
-            />
-            <img className="header__label--search" src={search} alt="search"/>
-          </label>
-          <div className="header__user">
-            <p className="header__user-name">John C.</p>
-            <img src={user} alt="user"/>
+                type="text"
+                onChange={e => setFilter(e.target.value)}
+                id="search"
+                placeholder="Try « Chicken cotoletta »"
+              />
+              <Search
+                styles="header__label--search"
+                fill="#000"
+                width="20px"
+                height="20px"
+              />
+            </label>
+            <div className="header__user">
+              <p className="header__user-name">John C.</p>
+              <User fill="#fff" width={"20"} height={"20"}/>
+            </div>
           </div>
-        </div>
         </div>
         <h1 className="header__title">Menu</h1>
       </div>

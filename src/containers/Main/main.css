@@ -12,6 +12,61 @@
   width: 959px;
   margin: 0 auto; }
 
+.main {
+  padding-top: 50px; }
+  .main__title {
+    position: relative;
+    margin-bottom: 10px;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -1.07px;
+    color: #000000; }
+    .main__title::before {
+      content: "";
+      position: absolute;
+      left: -19px;
+      top: 3px;
+      width: 9px;
+      height: 50px;
+      background-color: #ffb53a; }
+  .main__text {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.71px;
+    color: #000000; }
+  .main__add-dish {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .main__add-dish--btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Source Serif Pro', serif;
+      font-size: 17px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.41;
+      letter-spacing: -0.43px;
+      color: #fff;
+      outline: none;
+      border-width: 0;
+      background-color: #ffb53a;
+      border-radius: 5px;
+      padding: 14px 30px;
+      cursor: pointer; }
+    .main__add-dish--icon {
+      margin-left: 14px; }
+
 .dish-catalogue {
   display: grid;
   grid-template-columns: repeat(3, 305px);
