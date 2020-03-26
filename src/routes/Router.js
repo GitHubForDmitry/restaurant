@@ -8,7 +8,7 @@ function RouterComponent(props) {
   return (
     <Router>
           <Switch>
-            <Route exact path="/home">
+            <Route exact path="/">
               <Home />
             </Route>
             <Route path="/menu">

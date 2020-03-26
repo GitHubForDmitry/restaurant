@@ -14,7 +14,7 @@ function Main(props) {
             .filter(dish => dish.name.toLowerCase().includes(filter))
             .map((dish, index) =>
                     <div className="dish-catalogue__block" key={index}>
-                        <a className="dish-catalogue--link" href="#">
+                        <a className="dish-catalogue--link" href="../../../public/index.html">
                         <img className="dish-catalogue--img" src={dish.image} alt={dish.image}/>
                         <div className="dish-catalogue--wrapper">
 
