@@ -82,11 +82,112 @@ $pad: 30px;
     flex-direction: column;
     align-items: start;
     justify-content: flex-start;
+
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.12);
   }
   &--link {
     display: block;
     position: relative;
-    padding-bottom: 40%;
     text-decoration: none;
+  }
+  &--wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 10px 20px;
+  }
+  &--img {
+    border-radius: 10px;
+  }
+  &--type-kcl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    & > p {
+      font-family: 'Source Serif Pro', serif;
+      font-size: 11px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.39px;
+      color: $dishTextColor;
+      text-transform: uppercase;
+    }
+  }
+  &--name {
+    position: relative;
+    height: 86px;
+
+    font-family: 'Source Serif Pro', serif;
+    font-size: 17px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.61px;
+    color: $dishTextColor;
+    text-align: left;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 8px;
+      width: 15px;
+      height: 4px;
+      background-color: $butterscotch;
+    }
+  }
+  &--description {
+    height: 54px;
+    margin-bottom: 10px;
+
+    font-family: 'Source Serif Pro', serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    color: $dishTextColor;
+  }
+  &--price-persons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    & .price {
+      font-family: 'Source Serif Pro', serif;
+      font-size: 17px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.61px;
+      color: $dishTextColor;
+      & .currency {
+        font-family: 'Source Serif Pro', serif;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.5px;
+        color: $dishTextColor;
+      }
+    }
+    & .persons {
+      font-family: 'Source Serif Pro', serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.57;
+      letter-spacing: -0.5px;
+      text-align: right;
+      color: $dishTextColor;
+    }
   }
 }

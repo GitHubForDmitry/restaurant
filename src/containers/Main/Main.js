@@ -16,9 +16,23 @@ function Main(props) {
                     <div className="dish-catalogue__block" key={index}>
                         <a className="dish-catalogue--link" href="#">
                         <img className="dish-catalogue--img" src={dish.image} alt={dish.image}/>
-                        <p className="dish-catalogue--description">{dish.description}</p>
+                        <div className="dish-catalogue--wrapper">
+
+                        <div className="dish-catalogue--type-kcl">
+                            <p className="type">{dish.type}</p>
+                            <p className="kcl">{dish.kcl} kcl</p>
+                        </div>
+
                         <p className="dish-catalogue--name">{dish.name}</p>
+                        <p className="dish-catalogue--description">{dish.description}</p>
+                        <div className="dish-catalogue--price-persons">
+                            <p className="price">{dish.price && <span className='currency'>$</span>}{dish.price}</p>
+                            <p className="persons">For {dish.persons} <br/> persons</p>
+                        </div>
+                        </div>
+
                         </a>
+
                     </div>
                 ,);
     useEffect(() => {}, [allDishes, data])
