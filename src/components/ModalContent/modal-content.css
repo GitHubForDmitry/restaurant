@@ -23,7 +23,7 @@
   top: 0;
   right: 0;
   left: 0;
-  max-height: 300px;
+  height: 300px;
   padding: 93px 164px 10px;
   background-color: #f4f4f4;
   border-top-right-radius: 5px;
@@ -172,6 +172,15 @@
     text-align: right;
     color: #262626;
     text-wrap: none; }
+.dish__shadow {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 300px;
+  padding: 94px 150px 10px; }
 
 .ingredients {
   display: flex;

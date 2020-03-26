@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./link-routes.css";
 
-function LinkRoutes({isHeaderMoved}) {
+const LinkRoutes = ({isHeaderMoved}) => {
 
   const path = window.location.pathname;
   const active = (params) => path.slice(-1) === params;

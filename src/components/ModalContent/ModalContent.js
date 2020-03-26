@@ -7,7 +7,7 @@ import Plus from "../../assets/images/icons/Plus";
 import Menu from "../../assets/images/icons/Menu";
 import Trash from "../../assets/images/icons/Trash";
 
-function ModalContent(props) {
+const ModalContent = () => {
   const {
     handleChangeImage,
     setDishName,
@@ -36,11 +36,11 @@ function ModalContent(props) {
   const [error, setError] = React.useState(false);
   return (
     <div className="dish">
-      <div>
-        <div
-          className="dish__image"
-          style={{ backgroundImage: `url(${dishImage})` }}
-        >
+      <div
+        className="dish__image"
+        style={{ backgroundImage: `url(${dishImage})` }}
+      >
+        <div className={dishImage ? "dish__shadow" : ""}>
           <div className="dish__container">
             <h1
               style={dishImage ? { color: "#fff" } : { color: "#000" }}
@@ -193,7 +193,7 @@ function ModalContent(props) {
                     placeholder="Weight (Kcl)"
                     id="kcl"
                     value={kcl}
-                    onChange={text => setKcl(text.target.value) }
+                    onChange={text => setKcl(text.target.value)}
                   />
                   <button
                     className="ingredients__prepare--trash-btn"
@@ -304,6 +304,6 @@ function ModalContent(props) {
       </div>
     </div>
   );
-}
+};
 
 export default ModalContent;

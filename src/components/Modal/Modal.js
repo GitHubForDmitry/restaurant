@@ -15,13 +15,7 @@ const Modal = props => {
     >
       <div className="modal__wrapper" onClick={closeModal} />
       <div onClick={closeModal} />
-      <div className="modal__inner"
-           style={{
-
-        }}
-      >
-        {children}
-      </div>
+      <div className="modal__inner">{children}</div>
     </div>
   );
 };

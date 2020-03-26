@@ -4,22 +4,22 @@ import Home from "../screens/Home";
 import Menu from "../screens/Menu";
 import Contact from "../screens/Contact";
 
-function RouterComponent(props) {
+const RouterComponent = () => {
   return (
     <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/menu">
-              <Menu />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-          </Switch>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/menu">
+          <Menu />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
     </Router>
   );
-}
+};
 
 export default RouterComponent;

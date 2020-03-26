@@ -6,7 +6,7 @@ import ModalContent from "../../components/ModalContent/ModalContent";
 import "./main.css";
 import Plus from "../../assets/images/icons/Plus";
 
-function Main(props) {
+const Main = () => {
   const { filter, openModal, isModalOpen, closeModal, data } = useContext(
     AppContext
   );
@@ -29,7 +29,6 @@ function Main(props) {
 
   useEffect(() => {}, [allDishes, data]);
 
-  console.log(data);
   return (
     <main className="main">
       <div className="container">
@@ -51,53 +50,51 @@ function Main(props) {
         <Modal isModalOpen={isModalOpen} closeModal={closeModal}>
           <ModalContent />
         </Modal>
-        <div className="dish-catalogue">{
-          dishes
-              .concat(data)
-              .filter(dish => dish.name.toLowerCase().includes(filter))
-              .map((dish, index) => (
-                  <div className="dish-catalogue__block" key={index}>
-                    <a
-                        className="dish-catalogue--link"
-                        href="#"
-                    >
-                      <img
-                          className="dish-catalogue--img"
-                          src={dish.image}
-                          alt={dish.image}
-                      />
-                      <div className="dish-catalogue--wrapper">
-                        <div className="dish-catalogue--type-kcl">
-                          <p className="type">{dish.type || "DELICACY"}</p>
-                          <p className="kcl">{dish.kcl || 0} kcl</p>
-                        </div>
+        <div className="dish-catalogue">
+          {dishes
+            .concat(data)
+            .filter(dish => dish.name.toLowerCase().includes(filter))
+            .map((dish, index) => (
+              <div className="dish-catalogue__block" key={index}>
+                <a className="dish-catalogue--link" href="#">
+                  <img
+                    className="dish-catalogue--img"
+                    src={dish.image}
+                    alt={dish.image}
+                  />
+                  <div className="dish-catalogue--wrapper">
+                    <div className="dish-catalogue--type-kcl">
+                      <p className="type">{dish.type || "DELICACY"}</p>
+                      <p className="kcl">{dish.kcl || 0} kcl</p>
+                    </div>
 
-                        <p className="dish-catalogue--name">{dish.name}</p>
-                        <p className="dish-catalogue--description">
-                          {dish.description}
+                    <p className="dish-catalogue--name">{dish.name}</p>
+                    <p className="dish-catalogue--description">
+                      {dish.description}
+                    </p>
+                    <div className="dish-catalogue--price-persons">
+                      <p className="price">
+                        {dish.price && <span className="currency">$</span>}
+                        {dish.price || "Free"}
+                      </p>
+                      {dish.persons ? (
+                        <p className="persons">
+                          For {dish.persons} <br /> persons
                         </p>
-                        <div className="dish-catalogue--price-persons">
-                          <p className="price">
-                            {dish.price && <span className="currency">$</span>}
-                            {dish.price || "Free"}
-                          </p>
-                          {dish.persons ?
-                              <p className="persons">
-                                For {dish.persons} <br /> persons
-                              </p> :
-                              <p className="persons">
-                                For 1 <br /> person
-                              </p>
-                          }
-                        </div>
-                      </div>
-                    </a>
+                      ) : (
+                        <p className="persons">
+                          For 1 <br /> person
+                        </p>
+                      )}
+                    </div>
                   </div>
-              ))
-        }</div>
+                </a>
+              </div>
+            ))}
+        </div>
       </div>
     </main>
   );
-}
+};
 
 export default Main;

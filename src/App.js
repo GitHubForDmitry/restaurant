@@ -1,20 +1,19 @@
-import React from 'react';
+import React from "react";
 import RouterComponent from "./routes/Router";
 import { AppProvider } from "./context/AppContext";
 import ErrorBoundary from "./errorBoundary";
-import {HashRouter} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-      <HashRouter basename="/">
+    <HashRouter basename="/">
       <ErrorBoundary>
-          <AppProvider>
-              <RouterComponent />
-          </AppProvider>
+        <AppProvider>
+          <RouterComponent />
+        </AppProvider>
       </ErrorBoundary>
-      </HashRouter>
-
+    </HashRouter>
   );
-}
+};
 
 export default App;
