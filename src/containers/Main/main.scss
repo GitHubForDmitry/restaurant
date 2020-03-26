@@ -1,0 +1,29 @@
+@import "../../globalStyle";
+
+$gridBlock: 305px;
+$gridColGap: 22px;
+$gridRowGap: 1px;
+$pad: 30px;
+
+.dish-catalogue {
+  display: grid;
+  grid-template-columns: repeat(3, $gridBlock);
+  grid-column-gap: $gridColGap;
+  grid-row-gap: $gridRowGap;
+  padding: $pad;
+  justify-content: center;
+  &__block {
+    position: relative;
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+  }
+  &--link {
+    display: block;
+    position: relative;
+    padding-bottom: 40%;
+    text-decoration: none;
+  }
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import LinkRoutes from "../components/LinkRoutes/LinkRoutes";
+import Header from "../containers/Header/Header";
 
 function Contact(props) {
     return (
         <div>
-            <LinkRoutes />
+            <Header />
         </div>
     );
 }
