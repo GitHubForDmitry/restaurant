@@ -67,7 +67,11 @@ module.exports = env => {
                     NODE_ENV: JSON.stringify(env.NODE_ENV)
                 }
             }),
-            new HTMLWebpackPlugin(),
+            new HTMLWebpackPlugin({
+                template: "./public/index.html",
+                inject: true,
+                title: "Restaurant"
+            }),
             new UglifyJSPlugin(),
             new CompressionPlugin({
                 algorithm: "gzip"
