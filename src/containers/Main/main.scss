@@ -1,9 +1,4 @@
-@import "../../globalStyle";
-
-$gridBlock: 305px;
-$gridColGap: 22px;
-$gridRowGap: 1px;
-$pad: 30px;
+@import "../../globalStyles/globalStyle";
 
 .main {
   padding-top: 50px;
@@ -73,7 +68,7 @@ $pad: 30px;
   grid-template-columns: repeat(3, $gridBlock);
   grid-column-gap: $gridColGap;
   grid-row-gap: $gridRowGap;
-  padding: $pad;
+  padding: $pad 0;
   justify-content: center;
   &__block {
     position: relative;
@@ -192,5 +187,17 @@ $pad: 30px;
       text-align: right;
       color: $dishTextColor;
     }
+  }
+}
+
+@media screen and (max-width: 961px) {
+  .dish-catalogue {
+    grid-template-columns: repeat(2, $gridBlock);
+  }
+}
+
+@media screen and (max-width: 669px) {
+  .dish-catalogue {
+    grid-template-columns: repeat(1, $gridBlock);
   }
 }

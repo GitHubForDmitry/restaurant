@@ -1,4 +1,4 @@
-@import "../../globalStyle";
+@import "../../globalStyles/globalStyle";
 .nav {
   list-style-type: none;
   display: flex;
@@ -29,4 +29,11 @@
       }
     }
   }
+}
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  border-width: 0;
+  outline: none;
+  background-color: transparent;
 }

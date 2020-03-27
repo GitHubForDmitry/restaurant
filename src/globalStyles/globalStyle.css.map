@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAIA,UAAW;EACT,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM",
+"mappings": "AAQA,UAAW;EACT,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM",
 "sources": ["globalStyle.scss"],
 "names": [],
 "file": "globalStyle.css"

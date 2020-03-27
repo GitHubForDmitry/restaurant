@@ -1,11 +1,11 @@
 $butterscotch: #ffb53a;
 $dishTextColor: #2e3b50;
 $blackText: #262626;
+$gridBlock: 305px;
+$gridColGap: 22px;
+$gridRowGap: 1px;
+$pad: 30px;
 
-.container {
-  width: 959px;
-  margin: 0 auto;
-}
 
 @mixin textStyles($color, $fs) {
   font-family: 'Source Serif Pro', serif;
@@ -25,3 +25,4 @@ $blackText: #262626;
   align-items: center;
   justify-content: space-between;
 }
+
