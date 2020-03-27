@@ -1,7 +1,5 @@
-@font-face {
-  font-family: 'Galano';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url("../assets/fonts/GalanoGrotesque-Medium.ttf"); }
+.container {
+  width: 959px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=globalStyle.css.map */
