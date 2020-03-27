@@ -64,7 +64,8 @@
     align-items: flex-start; }
 
   .modal__inner,
-  .dish__form, .dish__container {
+  .dish__form,
+  .dish__container {
     width: 330px;
     padding: 0 5px; }
 
@@ -83,7 +84,8 @@
   .ingredients__prepare {
     flex-direction: column; }
 
-  .ingredients__prepare--ingredient-name, .ingredients__prepare--text {
+  .ingredients__prepare--ingredient-name,
+  .ingredients__prepare--text {
     width: 100%;
     margin-bottom: 10px; }
 
@@ -91,6 +93,10 @@
     display: none; }
 
   .ingredients--btn--plus {
-    padding-top: 5px; } }
+    padding-top: 5px; }
+
+  .nav__item--link--active,
+  .nav__item--link {
+    padding: 5px 10px; } }
 
 /*# sourceMappingURL=index.css.map */

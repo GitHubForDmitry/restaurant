@@ -14,11 +14,56 @@ const Main = () => {
   const [isEndOfThePage, setIsEndOfThePage] = useState(true);
   const [allDishes, setAllDishes] = useState([]);
 
+
+
+  const dishList = dishes
+      .concat(data)
+      .filter(dish => dish.name.toLowerCase().includes(filter))
+      .map((dish, index) => (
+          <div className="dish-catalogue__block" key={index}>
+            <a className="dish-catalogue--link" href="#">
+              <img
+                  className="dish-catalogue--img"
+                  src={dish.image}
+                  alt={dish.image}
+              />
+              <div className="dish-catalogue--wrapper">
+                <div className="dish-catalogue--type-kcl">
+                  <p className="type">{dish.type || "DELICACY"}</p>
+                  <p className="kcl">{dish.kcl || 0} kcl</p>
+                </div>
+
+                <p className="dish-catalogue--name">{dish.name}</p>
+                <p className="dish-catalogue--description">
+                  {dish.description}
+                </p>
+                <div className="dish-catalogue--price-persons">
+                  <p className="price">
+                    {dish.price && <span className="currency">$</span>}
+                    {dish.price || "Free"}
+                  </p>
+                  {dish.persons ? (
+                      <p className="persons">
+                        For {dish.persons} <br /> persons
+                      </p>
+                  ) : (
+                      <p className="persons">
+                        For 1 <br /> person
+                      </p>
+                  )}
+                </div>
+              </div>
+            </a>
+          </div>
+      ));
+  console.log(data)
+  console.log(dishList);
+  console.log(allDishes);
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         setIsEndOfThePage(true);
-        setAllDishes(prevState => [...prevState, allDishes]);
+        setAllDishes(prevState => [...prevState, dishList].flat(2));
       } else setIsEndOfThePage(false);
     };
     window.addEventListener("scroll", handleScroll);
@@ -26,9 +71,7 @@ const Main = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isEndOfThePage]);
-
-  useEffect(() => {}, [allDishes, data]);
-
+  useEffect(() => {}, [allDishes])
   return (
     <main className="main">
       <div className="container">
@@ -51,46 +94,7 @@ const Main = () => {
           <ModalContent />
         </Modal>
         <div className="dish-catalogue">
-          {dishes
-            .concat(data)
-            .filter(dish => dish.name.toLowerCase().includes(filter))
-            .map((dish, index) => (
-              <div className="dish-catalogue__block" key={index}>
-                <a className="dish-catalogue--link" href="#">
-                  <img
-                    className="dish-catalogue--img"
-                    src={dish.image}
-                    alt={dish.image}
-                  />
-                  <div className="dish-catalogue--wrapper">
-                    <div className="dish-catalogue--type-kcl">
-                      <p className="type">{dish.type || "DELICACY"}</p>
-                      <p className="kcl">{dish.kcl || 0} kcl</p>
-                    </div>
-
-                    <p className="dish-catalogue--name">{dish.name}</p>
-                    <p className="dish-catalogue--description">
-                      {dish.description}
-                    </p>
-                    <div className="dish-catalogue--price-persons">
-                      <p className="price">
-                        {dish.price && <span className="currency">$</span>}
-                        {dish.price || "Free"}
-                      </p>
-                      {dish.persons ? (
-                        <p className="persons">
-                          For {dish.persons} <br /> persons
-                        </p>
-                      ) : (
-                        <p className="persons">
-                          For 1 <br /> person
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </a>
-              </div>
-            ))}
+          {dishList.concat(allDishes)}
         </div>
       </div>
     </main>

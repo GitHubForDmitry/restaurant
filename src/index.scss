@@ -71,33 +71,39 @@
     align-items: flex-start;
   }
   .modal__inner,
-  .dish__form, .dish__container {
+  .dish__form,
+  .dish__container {
     width: 330px;
-      padding: 0 5px;
+    padding: 0 5px;
   }
-    .dish__info{
-        margin-bottom: 50px;
-    }
-    .dish__name,
-    .dish__select,
-    .dish__textarea,
-    .ingredients__add,
-    .ingredients--btn
-    {
-        display: block;
-        margin: 0 auto;
-        width: 95%;
-    }
-    .ingredients__prepare {
-        flex-direction: column;
-    }
-    .ingredients__prepare--ingredient-name, .ingredients__prepare--text {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .ingredients--text {
-        display: none;
-    }
-    .ingredients--btn--plus {
-        padding-top: 5px;}
+  .dish__info {
+    margin-bottom: 50px;
+  }
+  .dish__name,
+  .dish__select,
+  .dish__textarea,
+  .ingredients__add,
+  .ingredients--btn {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .ingredients__prepare {
+    flex-direction: column;
+  }
+  .ingredients__prepare--ingredient-name,
+  .ingredients__prepare--text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .ingredients--text {
+    display: none;
+  }
+  .ingredients--btn--plus {
+    padding-top: 5px;
+  }
+  .nav__item--link--active,
+  .nav__item--link {
+    padding: 5px 10px;
+  }
 }
