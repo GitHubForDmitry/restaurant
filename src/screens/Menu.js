@@ -5,11 +5,11 @@ import Footer from "../containers/Footer/Footer";
 
 const Menu = () => {
   return (
-    <>
+    <React.Fragment>
       <Header />
       <Main />
       <Footer />
-    </>
+    </React.Fragment>
   );
 }
 
