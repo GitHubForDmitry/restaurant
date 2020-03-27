@@ -1,9 +1,7 @@
 @import "../../globalStyles/globalStyle";
 .nav {
   list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include centerFlex;
   &__item {
     margin-right: 16px;
     &:last-child {
@@ -25,7 +23,6 @@
         @include textStyles($butterscotch, 17);;
         background-color: rgba($butterscotch, 0.2);
         border-radius: 5px;
-
       }
     }
   }

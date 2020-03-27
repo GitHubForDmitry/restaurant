@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./link-routes.css";
 import Menu from "../../assets/images/icons/Menu";
+import PropTypes from "prop-types";
 
 const LinkRoutes = ({isHeaderMoved}) => {
 
@@ -48,5 +49,9 @@ const LinkRoutes = ({isHeaderMoved}) => {
     </nav>
   );
 }
+
+LinkRoutes.propTypes = {
+  isHeaderMoved: PropTypes.bool
+};
 
 export default LinkRoutes;

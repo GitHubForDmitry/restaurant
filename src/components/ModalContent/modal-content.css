@@ -35,7 +35,7 @@
   line-height: normal;
   letter-spacing: -0.71px;
   color: #000000;
-  margin-bottom: 108px; }
+  height: 108px; }
 .dish__add-photo {
   display: flex;
   align-items: center;
@@ -166,7 +166,7 @@
   left: 0;
   bottom: 0;
   height: 300px;
-  padding: 94px 0 10px; }
+  padding: 94px 150px 10px; }
 
 .ingredients {
   display: flex;

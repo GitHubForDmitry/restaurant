@@ -56,9 +56,7 @@ const Main = () => {
             </a>
           </div>
       ));
-  console.log(data)
-  console.log(dishList);
-  console.log(allDishes);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
