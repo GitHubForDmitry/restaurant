@@ -9,6 +9,8 @@
     }
     &--link {
       @include textStyles(#fff, 17);
+      text-align: center;
+      display: block;
       &-scroll{
         @include textStyles(#000, 17);
       }
