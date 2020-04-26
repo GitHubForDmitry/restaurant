@@ -65,8 +65,7 @@ class ModalContent extends React.Component  {
 
   getTotalKcl = (arr) => arr.length !== 0 ? arr.map(item => item.kcl).reduce(((prev, next) => {return +prev+ +next} )) : [];
   addPreparedCard = () => {
-    const data = [...this.state.data];
-    data.push(
+    this.props.context.push(
         {
           image: this.state.dishImage,
           name: this.state.dishName,
@@ -75,7 +74,6 @@ class ModalContent extends React.Component  {
           kcl: this.getTotalKcl(this.state.dataIngredient)
         }
     );
-    this.setState({ data })
   };
 
     componentDidUpdate(prevProps, prevState) {
@@ -98,12 +96,12 @@ class ModalContent extends React.Component  {
       dataIngredient,
       totalKcl,
       error,
-      buttonAddDish
+      buttonAddDish,
     } = this.state;
-    const { closeModal} = this.props;
-    console.log(this.state.data);
+    const { closeModal, mainData } = this.props;
     return (
         <div className="dish">
+
           <div
               className="dish__image"
               style={{ backgroundImage: `url(${dishImage})` }}
