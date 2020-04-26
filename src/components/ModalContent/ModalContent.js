@@ -112,10 +112,10 @@ class ModalContent extends React.Component {
     } = this.state;
     const { closeModal } = this.props;
 
-    let newDish = new AddDish(dishImage,
+    const newDish = new AddDish(dishImage,
         dishName,
         dishDescription,
-        dishType)
+        dishType);
     return (
       <div className="dish">
         <div
