@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { dishes } from "../../api/API";
+import { dishes } from "../../static/API";
 import AppContext from "../../context/AppContext";
 import Modal from "../../components/Modal/Modal";
 import ModalContent from "../../components/ModalContent/ModalContent";
@@ -13,8 +13,6 @@ const Main = () => {
 
   const [isEndOfThePage, setIsEndOfThePage] = useState(true);
   const [allDishes, setAllDishes] = useState([]);
-
-
 
   const dishList = dishes
       .concat(data)

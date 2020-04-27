@@ -8,14 +8,15 @@ const RouterComponent = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+
+        <Route exact path="/menu">
           <Home />
-        </Route>
-        <Route path="/menu">
-          <Menu />
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/">
+          <Menu />
         </Route>
       </Switch>
     </Router>

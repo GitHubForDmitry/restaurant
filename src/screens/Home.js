@@ -7,10 +7,7 @@ const Home = () => {
         <div>
             <Header />
             <div className="container">
-                <h1>Please - push menu</h1>
-                <Link to="/menu" >
-                    Menu
-                </Link>
+                <h1>Hi</h1>
             </div>
         </div>
     );
